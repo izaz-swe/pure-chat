@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>LuxeHaven Estates | Exclusive Luxury Real Estate & Private Residences</title>
+  <meta name="description" content="Discover premier architectural homes, waterfront villas, and penthouses. Connect with dedicated private client advisors.">
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            brand: {
+              50: '#f0f9ff',
+              100: '#e0f2fe',
+              500: '#0284c7',
+              600: '#0369a1',
+              900: '#0f172a',
+            }
+          }
+        }
+      }
+    }
+  </script>
+
+  <!-- Custom Styles -->
+  <link rel="stylesheet" href="css/styles.css">
+
+  <!-- =======================================================
+       Hotjar & PureChat Analytics Integration Script
+       Configured in js/analytics.js
+  ======================================================== -->
+  <script src="js/analytics.js"></script>
+</head>
+<body class="bg-slate-50 text-slate-800 antialiased selection:bg-sky-500 selection:text-white">
+
+  <!-- Sticky Navbar -->
+  <header class="fixed top-0 left-0 right-0 z-40 glass-nav transition-all duration-300">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+      <!-- Logo -->
+      <a href="index.html" class="flex items-center gap-2">
+        <div class="w-10 h-10 rounded-xl bg-slate-900 flex items-center justify-center text-white font-bold text-xl shadow-md">
+          L
+        </div>
+        <div>
+          <span class="text-xl font-bold tracking-tight text-slate-900 font-serif block">LuxeHaven</span>
+          <span class="text-[10px] tracking-widest uppercase text-sky-600 font-semibold -mt-1 block">Estates & Advisory</span>
+        </div>
+      </a>
+
+      <!-- Desktop Nav -->
+      <nav class="hidden md:flex items-center gap-8 text-sm font-medium text-slate-600">
+        <a href="index.html" class="text-sky-600 font-semibold transition hover:text-sky-700">Home</a>
+        <a href="properties.html" class="hover:text-slate-900 transition">Properties</a>
+        <a href="#services" class="hover:text-slate-900 transition">Why Us</a>
+        <a href="contact.html" class="hover:text-slate-900 transition">Contact</a>
+      </nav>
+
+      <!-- Actions -->
+      <div class="hidden md:flex items-center gap-4">
+        <button class="trigger-purechat flex items-center gap-2 text-sm font-semibold text-slate-700 hover:text-sky-600 transition px-3 py-2 rounded-lg hover:bg-slate-100">
+          <span class="relative flex h-2.5 w-2.5">
+            <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
+            <span class="relative inline-flex rounded-full h-2.5 w-2.5 bg-emerald-500"></span>
+          </span>
+          Live Advisor
+        </button>
+        <a href="properties.html" class="bg-slate-900 hover:bg-slate-800 text-white text-sm font-medium px-5 py-2.5 rounded-full transition shadow-sm hover:shadow">
+          Explore Listings
+        </a>
+      </div>
+
+      <!-- Mobile Hamburger -->
+      <button id="mobile-menu-btn" class="md:hidden p-2 rounded-lg text-slate-600 hover:text-slate-900 hover:bg-slate-100 focus:outline-none" aria-label="Toggle navigation">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+        </svg>
+      </button>
+    </div>
+
+    <!-- Mobile Dropdown -->
+    <div id="mobile-menu" class="hidden md:hidden bg-white border-b border-slate-200 px-6 py-4 space-y-3">
+      <a href="index.html" class="block text-sm font-semibold text-sky-600">Home</a>
+      <a href="properties.html" class="block text-sm font-medium text-slate-600 hover:text-slate-900">Properties</a>
+      <a href="#services" class="block text-sm font-medium text-slate-600 hover:text-slate-900">Why Us</a>
+      <a href="contact.html" class="block text-sm font-medium text-slate-600 hover:text-slate-900">Contact</a>
+      <div class="pt-3 border-t border-slate-100 flex flex-col gap-2">
+        <button class="trigger-purechat w-full text-center py-2 text-sm text-slate-700 bg-slate-100 rounded-xl font-medium">
+          💬 Start Live Chat
+        </button>
+        <a href="contact.html" class="w-full text-center py-2 text-sm text-white bg-slate-900 rounded-xl font-medium">
+          Schedule Consultation
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="relative pt-32 pb-24 lg:pt-44 lg:pb-36 overflow-hidden">
+    <!-- Background Image with Overlay -->
+    <div class="absolute inset-0 z-0">
+      <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=2000&q=85" alt="Luxury Villa Architecture" class="w-full h-full object-cover">
+      <div class="absolute inset-0 bg-slate-950/70 backdrop-blur-[2px]"></div>
+    </div>
+
+    <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center text-white">
+      <!-- Badge -->
+      <div class="inline-flex items-center gap-2 bg-white/10 backdrop-blur-md px-4 py-1.5 rounded-full border border-white/20 text-xs font-semibold uppercase tracking-wider text-sky-300 mb-6">
+        <span class="w-2 h-2 rounded-full bg-sky-400 animate-pulse"></span>
+        Curated Private Real Estate
+      </div>
+
+      <!-- Headline -->
+      <h1 class="text-4xl sm:text-5xl lg:text-7xl font-bold font-serif max-w-4xl mx-auto leading-tight sm:leading-none">
+        Architectural Sanctuary Meets Prime Living.
+      </h1>
+
+      <p class="mt-6 text-lg sm:text-xl text-slate-300 max-w-2xl mx-auto font-light leading-relaxed">
+        Browse off-market villas, beachfront havens, and iconic penthouses. Our private concierge helps you analyze every property detail with complete discretion.
+      </p>
+
+      <!-- Quick Search Bar -->
+      <div class="mt-10 max-w-4xl mx-auto bg-white/95 backdrop-blur-md p-3 sm:p-4 rounded-3xl shadow-2xl border border-white/20 text-slate-800">
+        <form action="properties.html" method="GET" class="grid grid-cols-1 sm:grid-cols-3 gap-3 items-center">
+          <div class="px-4 py-2 text-left border-b sm:border-b-0 sm:border-r border-slate-200">
+            <label class="block text-xs uppercase font-bold text-slate-400 tracking-wider">Location</label>
+            <input type="text" name="location" placeholder="e.g. Malibu, Manhattan, Aspen" class="w-full text-sm font-semibold bg-transparent focus:outline-none text-slate-900 placeholder-slate-400 mt-0.5">
+          </div>
+          <div class="px-4 py-2 text-left border-b sm:border-b-0 sm:border-r border-slate-200">
+            <label class="block text-xs uppercase font-bold text-slate-400 tracking-wider">Property Type</label>
+            <select name="type" class="w-full text-sm font-semibold bg-transparent focus:outline-none text-slate-900 mt-0.5 cursor-pointer">
+              <option value="all">All Properties</option>
+              <option value="villa">Villas & Estates</option>
+              <option value="penthouse">Penthouses</option>
+              <option value="apartment">Modern Waterfront</option>
+            </select>
+          </div>
+          <div class="p-1">
+            <button type="submit" class="w-full py-3.5 px-6 bg-sky-600 hover:bg-sky-500 text-white font-semibold rounded-2xl transition duration-200 shadow-lg flex items-center justify-center gap-2">
+              <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"/></svg>
+              <span>Search Residences</span>
+            </button>
+          </div>
+        </form>
+      </div>
+
+      <!-- Quick Metrics -->
+      <div class="mt-14 grid grid-cols-2 md:grid-cols-4 gap-6 max-w-3xl mx-auto border-t border-white/10 pt-8 text-center">
+        <div>
+          <div class="text-3xl font-bold font-serif text-white">$1.2B+</div>
+          <div class="text-xs text-slate-400 uppercase tracking-wider mt-1">Transacted Volume</div>
+        </div>
+        <div>
+          <div class="text-3xl font-bold font-serif text-white">450+</div>
+          <div class="text-xs text-slate-400 uppercase tracking-wider mt-1">Prime Residences</div>
+        </div>
+        <div>
+          <div class="text-3xl font-bold font-serif text-white">99.4%</div>
+          <div class="text-xs text-slate-400 uppercase tracking-wider mt-1">Client Satisfaction</div>
+        </div>
+        <div>
+          <div class="text-3xl font-bold font-serif text-white">24/7</div>
+          <div class="text-xs text-slate-400 uppercase tracking-wider mt-1">PureChat Support</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Featured Properties Section -->
+  <section class="py-24 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="flex flex-col md:flex-row md:items-end justify-between mb-12">
+      <div>
+        <span class="text-sky-600 text-xs font-bold uppercase tracking-wider">Handpicked For You</span>
+        <h2 class="text-3xl sm:text-4xl font-bold font-serif text-slate-900 mt-1">Featured Exclusive Listings</h2>
+      </div>
+      <a href="properties.html" class="mt-4 md:mt-0 inline-flex items-center text-sm font-semibold text-sky-600 hover:text-sky-700 transition">
+        View All 50+ Properties
+        <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
+      </a>
+    </div>
+
+    <!-- Properties Grid (Populated by JS with data-limit) -->
+    <div id="properties-container" data-limit="3" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+      <!-- Cards rendered dynamically via js/main.js -->
+    </div>
+  </section>
+
+  <!-- Why Choose Us / Value Proposition -->
+  <section id="services" class="py-24 bg-slate-900 text-white relative overflow-hidden">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+      <div class="text-center max-w-3xl mx-auto mb-16">
+        <span class="text-sky-400 text-xs font-bold uppercase tracking-wider">Unrivaled Excellence</span>
+        <h2 class="text-3xl sm:text-4xl font-bold font-serif mt-2">Why Discerning Buyers Choose LuxeHaven</h2>
+        <p class="text-slate-400 mt-4 leading-relaxed">
+          From private aerial tours to confidential negotiation, our client advisors deliver seamless, concierge-driven experiences.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <!-- Feature 1 -->
+        <div class="glass-dark p-8 rounded-3xl border border-slate-800 hover:border-slate-700 transition">
+          <div class="w-14 h-14 bg-sky-500/10 text-sky-400 rounded-2xl flex items-center justify-center mb-6 text-2xl">
+            💎
+          </div>
+          <h3 class="text-xl font-bold mb-3">Off-Market Inventory</h3>
+          <p class="text-slate-400 text-sm leading-relaxed">
+            Gain access to discreet pocket listings and unlisted luxury estates that never hit the public multiple listing services.
+          </p>
+        </div>
+
+        <!-- Feature 2 -->
+        <div class="glass-dark p-8 rounded-3xl border border-slate-800 hover:border-slate-700 transition">
+          <div class="w-14 h-14 bg-emerald-500/10 text-emerald-400 rounded-2xl flex items-center justify-center mb-6 text-2xl">
+            💬
+          </div>
+          <h3 class="text-xl font-bold mb-3">Instant Live Concierge</h3>
+          <p class="text-slate-400 text-sm leading-relaxed">
+            Integrated with PureChat live assistance. Connect directly with a licensed estate specialist within 15 seconds.
+          </p>
+        </div>
+
+        <!-- Feature 3 -->
+        <div class="glass-dark p-8 rounded-3xl border border-slate-800 hover:border-slate-700 transition">
+          <div class="w-14 h-14 bg-amber-500/10 text-amber-400 rounded-2xl flex items-center justify-center mb-6 text-2xl">
+            📊
+          </div>
+          <h3 class="text-xl font-bold mb-3">Data-Driven Valuations</h3>
+          <p class="text-slate-400 text-sm leading-relaxed">
+            Comprehensive market analytics and neighborhood yield projections to safeguard and multiply your family's equity.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Live Chat CTA Banner -->
+  <section class="py-20 bg-gradient-to-r from-sky-900 via-slate-900 to-indigo-950 text-white">
+    <div class="max-w-5xl mx-auto px-4 text-center">
+      <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-semibold bg-sky-500/20 text-sky-300 border border-sky-400/30 mb-4">
+        <span class="w-2 h-2 rounded-full bg-emerald-400"></span>
+        Specialists Available Now
+      </span>
+      <h2 class="text-3xl sm:text-4xl font-bold font-serif">Have questions regarding a property?</h2>
+      <p class="text-slate-300 mt-3 max-w-xl mx-auto text-base">
+        Click below to initiate an immediate chat session with our private client team or request a private viewing schedule.
+      </p>
+      <div class="mt-8 flex flex-col sm:flex-row gap-4 justify-center">
+        <button class="trigger-purechat px-8 py-4 bg-sky-500 hover:bg-sky-400 text-white font-semibold rounded-2xl transition shadow-lg flex items-center justify-center gap-2">
+          <span>💬 Start Live PureChat</span>
+        </button>
+        <a href="contact.html" class="px-8 py-4 bg-white/10 hover:bg-white/20 text-white font-semibold rounded-2xl transition border border-white/20">
+          Book Private Tour
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Newsletter Lead Capture -->
+  <section class="py-16 bg-white border-t border-slate-100">
+    <div class="max-w-4xl mx-auto px-4 text-center">
+      <h3 class="text-2xl font-bold font-serif text-slate-900">Subscribe to The LuxeHavens Ledger</h3>
+      <p class="text-slate-600 text-sm mt-2">Bi-weekly curated market briefings, architectural deep dives, and upcoming off-market releases.</p>
+      
+      <form id="newsletter-form" class="mt-6 flex flex-col sm:flex-row gap-3 max-w-md mx-auto">
+        <input type="email" required placeholder="Enter your private email" class="flex-1 px-4 py-3 rounded-xl border border-slate-300 focus:outline-none focus:ring-2 focus:ring-sky-500 text-sm">
+        <button type="submit" class="px-6 py-3 bg-slate-900 hover:bg-slate-800 text-white text-sm font-semibold rounded-xl transition">
+          Subscribe
+        </button>
+      </form>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-slate-950 text-slate-400 py-16 text-sm">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-1 md:grid-cols-4 gap-8">
+      <div>
+        <div class="flex items-center gap-2 text-white font-bold text-lg font-serif">
+          <div class="w-8 h-8 rounded-lg bg-sky-600 flex items-center justify-center text-white text-base">L</div>
+          LuxeHaven Estates
+        </div>
+        <p class="mt-4 text-xs text-slate-500 leading-relaxed">
+          Specializing in prime residential estates, penthouses, and bespoke private acquisitions worldwide.
+        </p>
+      </div>
+
+      <div>
+        <h4 class="text-white font-semibold text-xs uppercase tracking-wider mb-3">Navigation</h4>
+        <ul class="space-y-2 text-xs">
+          <li><a href="index.html" class="hover:text-white">Home</a></li>
+          <li><a href="properties.html" class="hover:text-white">Properties Directory</a></li>
+          <li><a href="contact.html" class="hover:text-white">Schedule Private Consultation</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <h4 class="text-white font-semibold text-xs uppercase tracking-wider mb-3">Integrated Tracking</h4>
+        <ul class="space-y-2 text-xs text-slate-500">
+          <li class="flex items-center gap-1.5"><span class="text-amber-400">🔥</span> Hotjar Heatmap & Session Tracking</li>
+          <li class="flex items-center gap-1.5"><span class="text-sky-400">💬</span> PureChat Real-Time Messaging</li>
+          <li class="flex items-center gap-1.5"><span class="text-emerald-400">📈</span> Customer Journey Attribution</li>
+        </ul>
+      </div>
+
+      <div>
+        <h4 class="text-white font-semibold text-xs uppercase tracking-wider mb-3">Headquarters</h4>
+        <p class="text-xs text-slate-500">
+          450 Ocean Drive, Suite 2200<br>
+          Malibu, CA 90265<br>
+          concierge@luxehaven.com
+        </p>
+      </div>
+    </div>
+    
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mt-12 pt-6 border-t border-slate-900 text-xs text-slate-600 text-center">
+      © 2026 LuxeHaven Estates. All rights reserved. Configured with Hotjar & PureChat tracking scripts.
+    </div>
+  </footer>
+
+  <!-- Main JavaScript File -->
+  <script src="js/main.js"></script>
+</body>
+</html>
