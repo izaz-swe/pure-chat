@@ -34,6 +34,24 @@
        Configured in js/analytics.js
   ======================================================== -->
   <script src="js/analytics.js"></script>
+
+  <!-- Contentsquare / Hotjar Tracking Code -->
+  <script defer src="https://t.contentsquare.net/uxa/db95ab30f041f.js"></script>
+
+  <!-- Install this snippet AFTER the Tracking code. -->
+  <script>
+    var your_user_id = typeof your_user_id !== 'undefined' ? your_user_id : null;
+    var userId = your_user_id || null; // Replace your_user_id with your own if available.
+    window.hj = window.hj || function(){(window.hj.q=window.hj.q||[]).push(arguments);};
+    window.hj('identify', userId, {
+        // Add your own custom attributes here. Some EXAMPLES:
+        // 'Signed up': '2019—06-20Z', // Signup date in ISO-8601 format.
+        // 'Last purchase category': 'Electronics', // Send strings with quotes around them.
+        // 'Total purchases': 15, // Send numbers without quotes.
+        // 'Last purchase date': '2019-06-20Z', // Send dates in ISO-8601 format.
+        // 'Last refund date': null, // Send null when no value exists for a user.
+    });
+  </script>
 </head>
 <body class="bg-slate-50 text-slate-800 antialiased selection:bg-sky-500 selection:text-white">
 
@@ -321,5 +339,8 @@
 
   <!-- Main JavaScript File -->
   <script src="js/main.js"></script>
+
+  <!-- PureChat Widget -->
+  <script type='text/javascript' data-cfasync='false'>window.purechatApi = { l: [], t: [], on: function () { this.l.push(arguments); } }; (function () { var done = false; var script = document.createElement('script'); script.async = true; script.type = 'text/javascript'; script.src = 'https://app.purechat.com/VisitorWidget/WidgetScript'; document.getElementsByTagName('HEAD').item(0).appendChild(script); script.onreadystatechange = script.onload = function (e) { if (!done && (!this.readyState || this.readyState == 'loaded' || this.readyState == 'complete')) { var w = new PCWidget({c: 'de8f8497-0cf4-49b7-a800-db0597af4966', f: true }); done = true; } }; })();</script>
 </body>
 </html>
